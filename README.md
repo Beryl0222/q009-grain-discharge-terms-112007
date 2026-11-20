@@ -8,5 +8,5 @@
 
 ```sh
 python3 inspect_records.py data/records.json --list
-python3 -m unittest discover -v
+python3 -m unittest discover -s tests -v
 ```

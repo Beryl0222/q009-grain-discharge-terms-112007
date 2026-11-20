@@ -9,7 +9,7 @@ from inspect_records import load_records
 
 class RecordsTest(unittest.TestCase):
     def setUp(self):
-        self.data = load_records(Path(__file__).parent / "data" / "records.json")
+        self.data = load_records(Path(__file__).resolve().parents[1] / "data" / "records.json")
 
     def test_record_references(self):
         for source, field, target in [('tally', 'candidate_lots', 'manifest.lot')]:
