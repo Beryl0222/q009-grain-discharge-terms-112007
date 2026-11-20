@@ -1,0 +1,165 @@
+{
+  "manifest": [
+    {
+      "id": "L71",
+      "lot": "M-71",
+      "hold": "1P",
+      "quantity_t": 12,
+      "step_t": 2,
+      "commodity": "豆粕",
+      "customer": "岩溪厂"
+    },
+    {
+      "id": "L72",
+      "lot": "M-72",
+      "hold": "1S",
+      "quantity_t": 10,
+      "step_t": 2,
+      "commodity": "豆粕",
+      "customer": "岩溪厂"
+    },
+    {
+      "id": "L13",
+      "lot": "Q-13",
+      "hold": "2P",
+      "quantity_t": 6,
+      "step_t": 1,
+      "commodity": "菜籽粕",
+      "customer": "白堤厂"
+    }
+  ],
+  "contract": [
+    {
+      "id": "K1",
+      "party": "岩溪厂",
+      "text": "M-71豆粕供一线，允许借石仓暂存；M-72可分收，每笔是2吨整倍数。两票都只能由岩溪厂确认更换最终用途。"
+    },
+    {
+      "id": "K2",
+      "party": "白堤厂",
+      "text": "Q-13可直接卸二号口，不与一号口停复装联动。"
+    },
+    {
+      "id": "K3",
+      "party": "石仓",
+      "text": "我方可签入仓，不代表岩溪厂验收。"
+    }
+  ],
+  "booking": [
+    {
+      "id": "E1",
+      "text": "一号南舱两票都记 Soy meal，米七一最初 12t，另一票 M七二为10公吨，不是上期编号 M71X。"
+    },
+    {
+      "id": "E2",
+      "text": "换到石仓能否沿用一线安排？M-72拟改到二线。"
+    }
+  ],
+  "tally": [
+    {
+      "id": "T1",
+      "from": "1P",
+      "to": "石仓",
+      "location": "石仓A区",
+      "candidate_lots": [
+        "M-71"
+      ],
+      "quantity": 12000,
+      "unit": "公斤",
+      "kind": "入仓"
+    },
+    {
+      "id": "T2",
+      "from": "1S",
+      "to": "石仓",
+      "location": "石仓A区",
+      "candidate_lots": [
+        "M-72"
+      ],
+      "quantity": 10,
+      "unit": "吨",
+      "kind": "入仓"
+    },
+    {
+      "id": "T3",
+      "from": "石仓",
+      "to": "岩溪厂",
+      "location": "石仓A区",
+      "candidate_lots": [
+        "M-71",
+        "M-72"
+      ],
+      "quantity": 16,
+      "unit": "吨",
+      "kind": "终收"
+    },
+    {
+      "id": "T4",
+      "from": "2P",
+      "to": "白堤厂",
+      "location": "二号口",
+      "candidate_lots": [
+        "Q-13"
+      ],
+      "quantity": 6,
+      "unit": "吨",
+      "kind": "终收"
+    },
+    {
+      "id": "T5",
+      "from": "石仓",
+      "to": "岩溪厂",
+      "location": "石仓A区",
+      "candidate_lots": [
+        "M-71"
+      ],
+      "quantity": 2000,
+      "unit": "公斤",
+      "kind": "终收"
+    }
+  ],
+  "notices": [
+    {
+      "id": "N1",
+      "ref": "E2",
+      "sender": "石仓",
+      "text": "可以换我们仓收，不代表同意改用途。"
+    },
+    {
+      "id": "N2",
+      "ref": "E2",
+      "sender": "岩溪厂",
+      "text": "仅同意 M-72 次批改二线。老单以原一线为准。"
+    },
+    {
+      "id": "N3",
+      "ref": "T3",
+      "sender": "岩溪厂",
+      "text": "找到卸货口联，该回单来自两票，米七一共八吨，其余米七二。"
+    },
+    {
+      "id": "N4",
+      "sender": "船方",
+      "text": "质量核对期间只暂停 M-72 未作最终确认的货，白堤照原定卸。"
+    }
+  ],
+  "exchanges": [
+    {
+      "id": "X1",
+      "signed": true,
+      "claims": [
+        {
+          "lot": "M-71",
+          "quantity_t": 12,
+          "tally": [
+            "T3"
+          ]
+        }
+      ],
+      "parties": [
+        "岩溪厂",
+        "船代"
+      ]
+    }
+  ]
+}
